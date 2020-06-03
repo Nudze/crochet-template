@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pdf.css">
+    <title>Crochet Form</title>
+</head>
+
+<body>
+    <header>
+
+        <h1>Crochet<img src="hook.png" alt="">Pattern<img src="hook.png" alt="">Template</h1>
+        <div>
+            Hello, my fellow crocheters.
+            <p>
+                I've created this template to make our lives easier when it comes down to writing patterns. It is
+                designed
+                to give you your pattern in pdf format. You can see below that it has some default fields, which
+                represent
+                information that most patterns include. They are not prefilled, information displayed is for
+                demonstrational
+                purposes only. If you don't care for them, just leave them blank and they won't be included in the final
+                draft.
+            </p>
+            Custom fields are added with the following buttons:
+            <ul>
+                <li>
+                    <span><i class="fas fa-heading"></i></span>
+                    adds a heading field to help you structure pattern with multiple parts;
+                </li>
+                <li>
+                    <span><i class="fas fa-align-left"></i></span>
+                    adds a paragraph field for additional explanations, notes, descriptions, etc;
+                </li>
+                <li>
+                    <span><i class="fas fa-image"></i></span>
+                    adds a field for image upload;
+                </li>
+                <li>
+                    <span id="row-round">
+                        <span><i class="fas fa-exchange-alt"></i></span>
+                        <span><i class="fas fa-circle-notch"></i></span>
+                    </span>
+                    indicate whether you are working in rows or rounds, respectively and toggles between the two;
+                </li>
+                <li>
+                    <span><i class="fas fa-plus"></i></span>
+                    adds a field for next row/round;
+                </li>
+                <li>
+                    <span><i class="fas fa-redo-alt"></i></span>
+                    resets row/round count.
+                </li>
+            </ul>
+            Keep in mind that after resetting the count, you won't be able to go back to your old count.
+            <p>
+                After submitting the form you will be able to see a rough preview of your pdf pattern bellow, together
+                with a download button.
+            </p>
+            <p>
+                This site does not grant me access to your pattern, but if you want to share it with me, or otherwise
+                get in touch you can find me on
+                <a href="https://www.instagram.com/crochet_buzz/?fbclid=IwAR3ef0lCYON4kg9kCUvLT5cQbk_eGp06q8pFY3zIUGYRJviR7FiKYE2Bsmo"
+                    target="_blank">
+                    instagram
+                    <i class="fab fa-instagram"></i>
+                </a>.
+            </p>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <form id="pattern-form">
+                <div id="default-inputs">
+                    <div id="name-wrap">
+                        <label for="pattern-name">Pattern name:</label>
+                        <input type="text" id="pattern-name" placeholder="Chunky Granny Square">
+                    </div>
+                    <div id="author-wrap">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" placeholder="Ellen P. Hagler">
+                    </div>
+                    <div id="image-wrap">
+                        <label for="image">Image:</label>
+                        <input type="file" id="image" placeholder="Ellen P. Hagler">
+                    </div>
+                    <div id="yarn-wrap">
+                        <label for="yarn">Yarn:</label>
+                        <input type="text" id="yarn" placeholder="Worsted Weight Yarn">
+                    </div>
+                    <div id="amount-wrap">
+                        <label for="amount">Amount:</label>
+                        <input type="text" id="amount" placeholder="142 g/ 5 oz, 230 m/ 252 yds">
+
+                    </div>
+                    <div id="hook-wrap">
+                        <label for="hook">Hook size:</label>
+                        <input type="text" id="hook" placeholder="G/6 (4 mm)">
+                    </div>
+                    <div id="gauge-wrap">
+                        <label for="gauge">Gauge:</label>
+                        <input type="text" placeholder="13 sc and 14 rows = 4 [10 cm]">
+                    </div>
+                    <div id="abbrev-wrap">
+                        Abbreviations:
+                        <span>Insert Abbreviation</span>
+                        <span><input type="text" placeholder="ch" class="abbrev"> = <input type="text"
+                                placeholder="chain" class="abbrev"></span>
+                        <span><input type="text" placeholder="sc" class="abbrev"> = <input type="text"
+                                placeholder="single crochet" class="abbrev"></span>
+                        <span><input type="text" placeholder="dc" class="abbrev"> = <input type="text"
+                                placeholder="double crochet" class="abbrev"></span>
+                        <span><input type="text" placeholder="hdc" class="abbrev"> = <input type="text"
+                                placeholder="half double crochet" class="abbrev"></span>
+
+                    </div>
+                </div>
+                <div id="custom-inputs"></div>
+                <button>Submit</button>
+            </form>
+            <div id="buttons">
+                <button><i class="fas fa-heading"></i></button>
+                <button><i class="fas fa-align-left"></i></button>
+                <button><i class="fas fa-image"></i></button>
+                <button><i class="fas fa-exchange-alt"></i></i></button>
+                <button><i class="fas fa-plus"></i></button>
+                <button><i class="fas fa-redo-alt"></i></button>
+            </div>
+        </div>
+        <article id="pdf" class="hidden">
+            <div id="pdf-header">
+                <h2></h2>
+                <em></em>
+            </div>
+            <div id="pdf-image"></div>
+            <div id="pdf-materials">
+                <p id="pdf-yarn"></p>
+                <p id="pdf-amount"></p>
+                <p id="pdf-hook"></p>
+            </div>
+            <div id="pdf-gauge">
+                <p></p>
+            </div>
+            <div id="pdf-abbrev"></div>
+            <div id="pdf-custom"></div>
+        </article>
+
+        <button id="get-pdf" class="hidden">Get PDF</button>
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+    <script src=" index.js"></script>
+    <script src="pdf.js"></script>
+</body>
+
+</html>

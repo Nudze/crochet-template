@@ -1,0 +1,35 @@
+#pdf {
+	font-family: 'Times New Roman', Times, serif;
+	margin-top: 100px;
+	background-color: white;
+	color: black;
+	padding: 50px;
+}
+
+#pdf-header {
+	text-align: center;
+}
+
+#pdf-header h2 {
+	margin: 0;
+}
+
+#pdf-image,
+.pdf-images {
+	width: 70%;
+	margin: 10px auto;
+}
+
+#pdf-image img,
+.pdf-images img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+/* this does not work in puppeteer?? */
+/* #pdf img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+} */

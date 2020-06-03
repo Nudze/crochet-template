@@ -1,0 +1,339 @@
+html {
+	font-size: 20px;
+}
+
+body {
+	color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	height: 100%;
+	background-color: #7918f2;
+	background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+	background-color: #663dff;
+	background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+}
+
+header h1 {
+	margin: 0;
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+header h1 img {
+	height: 60px;
+}
+
+header div {
+	margin: 50px 5%;
+}
+
+ul {
+	list-style: none;
+	white-space: normal;
+}
+
+li {
+	display: flex;
+	margin: 10px;
+	align-items: center;
+}
+
+li .fas {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: rgba(64, 0, 130, 0.6);
+}
+
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+main {
+	margin: 50px auto;
+	width: 80%;
+}
+
+#container {
+	position: relative;
+}
+
+#buttons {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 50px;
+	right: -35px;
+}
+
+#buttons button {
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin-top: 7px;
+	font-size: inherit;
+	color: inherit;
+	outline: none;
+	background-color: rgb(64, 0, 130);
+	transition: transform 0.3s ease-in;
+}
+
+#buttons button:hover {
+	transform: scale(1.1);
+}
+
+#pattern-form {
+	box-sizing: border-box;
+	padding: 50px 20px 100px 20px;
+	background-color: rgba(64, 0, 130, 0.5);
+}
+
+#default-inputs {
+	margin: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: "name name author author" "image image image image" "yarn yarn amount amount"
+		"hook hook gauge gauge" "abbrev abbrev abbrev abbrev";
+}
+
+#default-inputs div {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+#name-wrap {
+	grid-area: name;
+}
+
+#author-wrap {
+	grid-area: author;
+}
+
+#image-wrap {
+	grid-area: image;
+}
+
+#yarn-wrap {
+	grid-area: yarn;
+}
+
+#amount-wrap {
+	grid-area: amount;
+}
+
+#hook-wrap {
+	grid-area: hook;
+}
+
+#gauge-wrap {
+	grid-area: gauge;
+}
+
+#abbrev-wrap {
+	grid-area: abbrev;
+	position: relative;
+}
+
+#abbrev-wrap span {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#abbrev-wrap span input:first-child {
+	width: 10%;
+	flex-grow: 0;
+}
+
+#abbrev-wrap span input:last-child {
+	width: 85%;
+	flex-grow: 0;
+}
+
+#abbrev-wrap span:first-child {
+	position: absolute;
+	right: 0;
+	width: auto;
+	padding: 4px;
+	font-size: 0.7em;
+	background-color: rgb(64, 0, 130);
+	cursor: default;
+}
+
+#pattern-form button {
+	width: calc(100% - 80px);
+	height: 40px;
+	color: inherit;
+	outline: none;
+	border: none;
+	background-color: rgb(64, 0, 130);
+	font-family: inherit;
+	font-size: 1.1rem;
+	font-weight: inherit;
+	padding: 5px 0;
+	position: absolute;
+	bottom: 30px;
+	right: 40px;
+}
+
+textarea,
+input {
+	background-color: inherit;
+	color: inherit;
+	border: none;
+	border-bottom: 1px solid white;
+	font-weight: 300;
+	font-family: inherit;
+	outline: none;
+	flex-grow: 1;
+	font-size: 0.9rem;
+	margin-top: 5px;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+input[type="file"] {
+	position: relative;
+}
+
+input[type="file"]::after {
+	content: "Choose File";
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1px 5px;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: rgb(64, 0, 130);
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 0.6;
+}
+
+#custom-inputs {
+	margin: 10px;
+	display: grid;
+}
+
+#custom-inputs div {
+	margin: 10px;
+	height: 55px;
+	position: relative;
+	transform: scaleY(0);
+	transition: transform 490ms linear;
+}
+
+#custom-inputs div.text {
+	height: 100px;
+}
+
+#custom-inputs textarea {
+	width: 100%;
+}
+
+#custom-inputs input {
+	width: 100%;
+}
+
+.fa-times-circle {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.appear {
+	transform: scaleY(1) !important;
+}
+
+form {
+	transition: height 600ms linear;
+}
+
+#get-pdf {
+	width: 100%;
+	margin-top: 10px;
+	height: 40px;
+	color: inherit;
+	outline: none;
+	border: none;
+	background-color: rgb(64, 0, 130);
+	font-family: inherit;
+	font-size: 1.1rem;
+	font-weight: inherit;
+	padding: 5px 0;
+}
+
+.hidden {
+	display: none;
+}
+@media only screen and (max-width: 700px) {
+	html {
+		font-size: 18px;
+	}
+
+	ul {
+		padding: 0;
+	}
+
+	#row-round {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#row-round span:first-child {
+		margin-bottom: 10px;
+	}
+
+	main {
+		width: 100%;
+	}
+
+	#buttons {
+		right: 0;
+		bottom: -20px;
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+
+	#pattern-form {
+		width: 100%;
+		padding: 40px 0 100px 0;
+	}
+
+	#pattern-form button {
+		width: calc(100% - 20px);
+		right: 10px;
+		bottom: 55px;
+	}
+
+	#pdf {
+		font-size: 2vw;
+		padding: 5% !important;
+	}
+
+	header h1 {
+		font-size: 1.2rem;
+	}
+
+	header h1 img {
+		height: 30px;
+	}
+}
